@@ -15,7 +15,7 @@ interface StatusDetails {
 
 const useStyles = makeStyles(() => ({
   wrappedText: {
-    overflowWrap: 'anywhere', // Add overflowWrap property
+    overflowWrap: 'anywhere',
   },
 }));
 
@@ -24,7 +24,6 @@ function App() {
   const classes = useStyles();
   const [receiptNumber, setReceiptNumber] = useState('');
   const [isReceiptStatusLoading, setIsReceiptStatusLoading] = useState(false);
-  const [error, setError] = useState('');
   const [statusDetails, setStatusDetails] = useState<StatusDetails | undefined>(undefined);
 
   const [emailInput, setEmailInput] = useState('');
@@ -148,7 +147,7 @@ function App() {
     }
     return (
       <Paper
-            elevation={3} // Optional: Adds a shadow effect
+            elevation={3}
             style={{
               backgroundColor: '#F3F4F6',
               padding: '20px',
